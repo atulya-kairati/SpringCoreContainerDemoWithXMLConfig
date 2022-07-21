@@ -25,5 +25,12 @@ public class Client {
 		System.out.println(emp);
 //		System.out.println(emp1.hashCode());
 		
+		
+//		-------- Using Autowire --------
+		
+		ApplicationContext factory2 = new ClassPathXmlApplicationContext("springconfigWithAutowire.xml");
+		Employee e = factory2.getBean("emp", Employee.class);
+		System.out.println(e);
+		
 	}
 }
