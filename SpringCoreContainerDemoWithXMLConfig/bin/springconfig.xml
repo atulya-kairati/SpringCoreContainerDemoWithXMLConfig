@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+	<!-- bean tag is used to specify the class who's object is to be made -->
+	<bean id="emp" class="Employee">  <!-- Employee emp=new Employee() -->
+
+		<!-- Setter Injection -->
+		<!-- property tag calls the setter after the object has been created -->
+		<property name="empid" value="13"></property>
+		<property name="empName" value="naresh"></property>
+		<property name="empSal" value="1000"></property>
+		<property name="empAdd" value="banglore"></property>
+
+		<!-- Constructor injection -->
+		<!-- constructor-arg tag calls the constructor at the time of object creation-->
+		<constructor-arg name="empid" value="12"></constructor-arg>
+		<constructor-arg name="empName" value="suresh"></constructor-arg>
+		<constructor-arg name="empSal" value="9000"></constructor-arg>
+		<constructor-arg name="empAdd" value="hyderabad"></constructor-arg>
+	</bean>
+</beans>
