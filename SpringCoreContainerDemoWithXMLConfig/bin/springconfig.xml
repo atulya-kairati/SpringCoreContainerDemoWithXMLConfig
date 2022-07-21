@@ -16,13 +16,25 @@
 		<property name="empid" value="13"></property>
 		<property name="empName" value="naresh"></property>
 		<property name="empSal" value="1000"></property>
-		<property name="empAdd" value="banglore"></property>
+		
+		<!-- Since "add" property is a custom object we have to specify ref
+			which is id of the bean needed here
+		 -->
+		<property name="add" ref="address"></property>
 
 		<!-- Constructor injection -->
 		<!-- constructor-arg tag calls the constructor at the time of object creation-->
 		<constructor-arg name="empid" value="12"></constructor-arg>
 		<constructor-arg name="empName" value="suresh"></constructor-arg>
 		<constructor-arg name="empSal" value="9000"></constructor-arg>
-		<constructor-arg name="empAdd" value="hyderabad"></constructor-arg>
+		<constructor-arg name="add" ref="address"></constructor-arg>
+		
+		
+		
 	</bean>
+	
+	<bean id="address" class="Address">
+		<property name="city" value="Balrampur"></property>
+	</bean>
+	
 </beans>

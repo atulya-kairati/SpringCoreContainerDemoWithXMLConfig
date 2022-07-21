@@ -17,12 +17,13 @@ public class Client {
 		ApplicationContext factory=new ClassPathXmlApplicationContext("springconfig.xml");//eager initializer
 		
 		Employee emp = factory.getBean("emp", Employee.class);
-		Employee emp1 = factory.getBean("emp", Employee.class);
+//		Employee emp1 = factory.getBean("emp", Employee.class);
 		
 //		here emp and emp1 refer to the same object
 		
 		System.out.println(emp.hashCode());
-		System.out.println(emp1.hashCode());
+		System.out.println(emp);
+//		System.out.println(emp1.hashCode());
 		
 	}
 }

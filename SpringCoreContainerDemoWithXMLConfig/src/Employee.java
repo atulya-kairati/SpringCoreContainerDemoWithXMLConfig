@@ -4,7 +4,7 @@ public class Employee {
 	private int empid;
 	private String empName;
 	private int empSal;
-	private String empAdd;
+	private Address add;
 
 	public int getEmpid() {
 		return empid;
@@ -30,12 +30,12 @@ public class Employee {
 		this.empSal = empSal;
 	}
 
-	public String getEmpAdd() {
-		return empAdd;
+	public Address getAdd() {
+		return add;
 	}
 
-	public void setEmpAdd(String empAdd) {
-		this.empAdd = empAdd;
+	public void setAdd(Address add) {
+		this.add = add;
 	}
 
 	public Employee() {
@@ -44,16 +44,16 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [empid=" + empid + ", empName=" + empName + ", empSal=" + empSal + ", empAdd=" + empAdd + "]";
+		return "Employee [empid=" + empid + ", empName=" + empName + ", empSal=" + empSal + ", empAdd=" + add + "]";
 	}
 
-	public Employee(int empid, String empName, int empSal, String empAdd) {
+	public Employee(int empid, String empName, int empSal, Address add) {
 		super();
 		System.out.println("param constructor");
 		this.empid = empid;
 		this.empName = empName;
 		this.empSal = empSal;
-		this.empAdd = empAdd;
+		this.add = add;
 	}
 
 }
