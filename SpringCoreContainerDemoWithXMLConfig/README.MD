@@ -6,3 +6,4 @@
 - Make a bean class
 - Refer springconfig.xml for the required configuration
 - Use BeanFactory[x] or ApplicationCOntext to manage the bean class
+- Spring COntainer is also called IOC container
