@@ -9,7 +9,10 @@
 
 
 	<!-- bean tag is used to specify the class who's object is to be made -->
-	<bean id="emp" class="Employee">  <!-- Employee emp=new Employee() -->
+	<bean id="emp" class="Employee" scope="prototype">  <!-- Employee emp=new Employee() -->
+	
+	<!-- scope="singleton" -> Same object will be given by the bean factory -->
+	<!-- scope="prototype" -> different objects will be given by the bean factory -->
 
 		<!-- Setter Injection -->
 		<!-- property tag calls the setter after the object has been created -->
