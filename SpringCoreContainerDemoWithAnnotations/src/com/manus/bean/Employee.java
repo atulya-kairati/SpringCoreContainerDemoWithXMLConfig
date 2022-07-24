@@ -1,8 +1,10 @@
 package com.manus.bean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("emp") // Default name is |ClassName.lower()|
+@Scope("prototype")
 public class Employee {
 
 	private int empid;
